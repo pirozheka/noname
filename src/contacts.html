@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-items" x-data="{ searchOpen: false }" @click.away="searchOpen = false">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li>Каталог</li>
+                        <li>Услуги</li>
+                        <li><a href="/contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="recall">
+                    <div class="icon icon-callback">
+                        
+                    </div>
+                    <div class="recall-block">
+                        <div class="recall-caption">Закажите звонок</div>
+                        <div class="recall-number"><a href="tel:+79999999999">+7(999)999-99-99</a></div>
+                    </div>
+                </div>
+                <div class="recall-block">
+                    <div class="recall-caption">Оставьте заявку</div>
+                    <div class="recall-number">info@mail.com</div>
+                </div>
+                <div class="nav-icons">
+                    <div class="icon search-icon" @click="searchOpen = !searchOpen">
+                    </div>
+                    <div class="searchbox" x-show="searchOpen" x-transition>
+                        <input type="text" id="searchbox" placeholder="Поиск товара">
+                        <button id="search-submit" type="submit"></button>
+                        <div class="search-close" @click="searchOpen = !searchOpen"></div>
+                    </div>
+                    <div class="icon cart-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+
+</html>

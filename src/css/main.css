@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/Noah-Bold.ttf') format('ttf'),
+        url('../assets/fonts/Noah-Bold.otf') format('otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/Noah-Regular.otf') format('otf'),
+        url('../assets/fonts/Noah-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/Noah-BoldItalic.otf') format('otf'),
+        url('../assets/fonts/Noah-BoldItalic.ttf') format('ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/Noah-RegularItalic.otf') format('otf'),
+        url('../assets/fonts/Noah-RegularItalic.ttf') format('ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root {
+    --background-color: #ffffff;
+    --dark-background: #1E232D;
+    --accent: #FAA829;
+    --hover: #767676;
+    --normal: #E7E7E7;
+    --primary-font: 'Noah', sans-serif;
+}
+
+header {
+    background-color: var(--dark-background);
+    color: var(--normal);
+    position: fixed;
+    height: 100px;
+    width: 100%;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-menu {
+    text-transform: uppercase;
+}
+
+
+.nav-menu ul {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.recall {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    background: var(--normal);
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+}
+
+.icon:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    background: no-repeat center / contain url('../assets/icons/callback.svg');
+    transform: translate(-50%, -50%);
+}
+
+.search-icon:before {
+    background: no-repeat center / contain url('../assets/icons/search.svg');
+}
+
+.cart-icon::before {
+    background: no-repeat center / contain url('../assets/icons/cart.svg');
+}
+
+
+.icon:hover {
+    border: 1px solid var(--normal);
+    background: transparent;
+}
+
+.icon-callback:hover:before {
+    background: no-repeat center / contain url('../assets/icons/callback-hover.svg');
+}
+
+.search-icon:hover:before {
+    background: no-repeat center / contain url('../assets/icons/search-hover.svg');
+}
+
+.cart-icon:hover:before {
+    background: no-repeat center / contain url('../assets/icons/cart-hover.svg');
+}
+
+.searchbox {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    width: 430px;
+    outline: none;
+}
+
+.searchbox input[type='text'] {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1 px solid var(--hover);
+    border-radius: 10px;
+    padding: 0 54px 0 23px;
+    font-size: 14px;
+    color: var(--hover);
+    letter-spacing: 0.28px;
+    z-index: 20;
+    outline: none;
+}
+
+.searchbox button {
+    position: absolute;
+    top: 2px;
+    right: 40px;
+    width: 36px;
+    height: 36px;
+    background: no-repeat center / contain url('../assets/icons/search.svg');
+    background-size: 15px;
+    border: 0;
+    background-color: var(--normal);
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    z-index: 30;
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.search-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: no-repeat center url('../assets/icons/search-close.svg');
+    z-index: 30;
+
+    cursor: pointer;
+}
