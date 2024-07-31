@@ -48,7 +48,7 @@ button {
 }
 
 button:hover {
-    background-color:transparent;
+    background-color: transparent;
     border: 1px solid var(--accent);
     color: var(--accent);
 }
@@ -56,9 +56,14 @@ button:hover {
 header {
     background-color: var(--dark-background);
     color: var(--normal);
-    position: static;
+    position: fixed;
     height: 100px;
     width: 100%;
+    z-index: 99;
+}
+
+.header-mobile {
+    display: none;
 }
 
 h1 {
@@ -291,7 +296,7 @@ footer {
 
 .footer-menu {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     width: calc(100% / 1.5);
     color: var(--normal);
 }
@@ -301,7 +306,6 @@ footer {
     flex-direction: column;
     gap: 25px;
 }
-
 
 .footer-menu-item_caption {
     font-size: 20px;
@@ -337,4 +341,102 @@ footer {
 .offer {
     margin-top: 30px;
     color: var(--normal);
+}
+
+.footer-showmore {
+    display: block;
+    text-decoration: underline;
+    margin-top: 7px;
+}
+
+
+/* adaptive */
+@media (max-width:1180px) {
+    * {
+        font-size: 14px;
+    }
+
+
+    .recall {
+        gap: 12px;
+        justify-content: space-around;
+    }
+
+    .location-trigger {
+        gap: 5px;
+    }
+
+    .location-trigger img {
+        width: 14px;
+    }
+
+    .recall-block {
+        margin-left: 0;
+    }
+
+    #recall-button {
+        font-size: 12px;
+        height: 36px;
+    }
+
+    footer {
+        padding: 45px 0;
+    }
+
+}
+
+@media (max-width:980px) {
+    * {
+        overflow: hidden;
+    }
+
+
+    header {
+        display: none;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-top: 18px;
+    }
+
+    .header-mobile {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 100%;
+        color: var(--normal);
+        background-color: var(--dark-background);
+        z-index: 99;
+        padding-top: 10px;
+    }
+
+    .mobile-wrapper {
+        height: 100%;
+        max-width: 980px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        overflow: hidden;
+    }
+
+    .header-mobile-group {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-search {
+        display: block;
+        width: calc(100% / 1.6);
+        height: 28px;
+        padding: 0 10px;
+        border-radius: 4px;
+        outline: none;
+    }
+
 }

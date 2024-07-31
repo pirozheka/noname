@@ -55,17 +55,32 @@
             </div>
         </div>
     </header>
+    <div class="header-mobile">
+        <div class="mobile-wrapper">
+            <div class="header-mobile-group">
+                <div class="location">
+                    <a href="" class="location-trigger">
+                        <img src="assets/icons/location.svg" alt="">
+                        <p>Астана</p>
+                    </a>   
+                </div>
+                <input type="text" id="searchbox" class="mobile-search" placeholder="Поиск">
+            </div>
+        </div>
+
+    </div>
     <section class="contacts">
+        <div class="contacts-line"></div>
         <div class="container">
             <ul class="breadcrumps">
                 <li class="breadcrumps-item"><a href="/">Главная</a></li>
                 <li>Контакты</li>
             </ul>
+            <h1>Контакты</h1>
             <div class="contacts-cols">
-                <div class="contacts-left">
-                    <h1>Контакты</h1>
+                <div class="contacts-left">                 
                     <form action="" method="post" id="contacts-form">
-                        <input type="text" name="phone" placeholder="Телефон" required>
+                        <input type="tel" name="phone" placeholder="Телефон" required>
                         <input type="text" name="name" placeholder="Имя">
                         <label for="check">
                             <input type="checkbox" name="check" checked>
@@ -80,14 +95,14 @@
                         <div class="contacts-right-item_caption">Телефон</div>
                         <div class="contacts-right-item_descr">
                             <img src="assets/icons/phone.svg" alt="">
-                            <p>8 999 99 99 99</p>
+                            <p><a href="tel:+7999999999">8 999 99 99 99</a></p>
                         </div>
                     </div>
                     <div class="contacts-right-item">
                         <div class="contacts-right-item_caption">Почта</div>
                         <div class="contacts-right-item_descr">
                             <img src="assets/icons/mail.svg" alt="">
-                            <p>info@ermail.kz</p>
+                            <p><a href="mailto:info@ermail.kz">info@ermail.kz</a></p>
                         </div>
                     </div>
                     <div class="contacts-right-item">
@@ -106,12 +121,14 @@
                     </div>
                 </div>
             </div>
-            <div class="contacts-map">
-                <script type="text/javascript" charset="utf-8" async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad99b3a734a94df8fbf91d699fa8fd1acbe561f8675e2f7ca1b1c48cdb8349535&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
 
         </div>
+        <div class="contacts-map">
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad99b3a734a94df8fbf91d699fa8fd1acbe561f8675e2f7ca1b1c48cdb8349535&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+
+
     </section>
 
     <footer>
@@ -136,60 +153,66 @@
                     </div>
                 </div>
                 <div class="footer-menu">
-                    <div class="footer-menu-item">
-                        <div class="footer-menu-item_caption">Для клиентов</div>
-                        <ul>
-                            <li>Контакты</li>
-                            <li>Доставка и оплата</li>
-                            <li>Услуги</li>
-                            <li>Блог</li>
+                    <div class="footer-menu-item"">
+                        <div class=" footer-menu-item_caption">Для клиентов</div>
+                    <ul>
+                        <li>Каталог</li>
+                        <li>Услуги</li>
+                        <li>Контакты</li>
+                    </ul>
+                </div>
+                <div class="footer-menu-item" x-data="{ isOpen: false }">
+                    <div class="footer-menu-item_caption">Каталог</div>
+                    <ul>
+                        <li>Контакты</li>
+                        <li>Доставка и оплата</li>
+                        <li>Услуги</li>
+                        <li>Блог</li>
+                        <template x-if="isOpen">
                             <li>Текст</li>
-                        </ul>
+                            <li>Текст</li>
+                            <li>Текст</li>
+                        </template>
+                    </ul>
+                    <a href="#" x-on:click.prevent="isOpen = !isOpen">
+                        <span x-show="!isOpen" class="footer-showmore">Показать еще</span>
+                    </a>
+                </div>
+                <div class="footer-menu-item_group">
+                    <div class="footer-menu-item">
+                        <div class="footer-menu-item_caption">Контакты</div>
+
+                        <div class="footer-contact-item">
+                            <img src="assets/icons/location.svg" alt="">
+                            <p>Алматы, ул. Ленина 86, офис 15</p>
+                        </div>
+
+                        <div class="footer-contact-item">
+                            <img src="assets/icons/mail.svg" alt="">
+                            <p><a href="mailto:info@ermail.kz">info@ermail.kz</a></p>
+                        </div>
+
+                        <div class="footer-contact-item">
+                            <img src="assets/icons/phone.svg" alt="">
+                            <p><a href="tel:+7999999999">8 999 99 99 99</a></p>
+                        </div>
                     </div>
                     <div class="footer-menu-item">
-                        <div class="footer-menu-item_caption">Каталог</div>
-                        <ul>
-                            <li>Контакты</li>
-                            <li>Доставка и оплата</li>
-                            <li>Услуги</li>
-                            <li>Блог</li>
-                            <li>Текст</li>
-                        </ul>
-                    </div>
-                    <div class="footer-menu-item_group">
-                        <div class="footer-menu-item">
-                            <div class="footer-menu-item_caption">Контакты</div>
-
-                            <div class="footer-contact-item">
-                                <img src="assets/icons/location.svg" alt="">
-                                <p>Алматы, ул. Ленина 86, офис 15</p>
-                            </div>
-
-                            <div class="footer-contact-item">
-                                <img src="assets/icons/mail.svg" alt="">
-                                <p>info@ermail.kz</p>
-                            </div>
-
-                            <div class="footer-contact-item">
-                                <img src="assets/icons/phone.svg" alt="">
-                                <p>8 999 99 99 99</p>
-                            </div>
-                        </div>
-                        <div class="footer-menu-item">
-                            <div class="footer-menu-item_caption">Время работы</div>
-                            <p>Пн-Пт: 9:00-18:00</p>
-                            <p>Сб: 9:00-14:00</p>
-                            <p>Вс: выходной</p>
-                            <p>Прием заявок 24/7</p>
-                        </div>
+                        <div class="footer-menu-item_caption">Время работы</div>
+                        <p>Пн-Пт: 9:00-18:00</p>
+                        <p>Сб: 9:00-14:00</p>
+                        <p>Вс: выходной</p>
+                        <p>Прием заявок: 24/7</p>
                     </div>
                 </div>
             </div>
-            <div class="copyright">
-                <div>©ООО </div>
-                <a href="/policy">Политика конфиденциальности</a>
-            </div>
-            <p class="offer">Внимание, размещенная информация не является публичной офертой, подробнее можно ознакомиться здесь. Цены носят информационный характер, наличие товара уточняйте у менеджера.</p>
+        </div>
+        <div class="copyright">
+            <div>©ООО </div>
+            <a href="/policy">Политика конфиденциальности</a>
+        </div>
+        <p class="offer">Внимание, размещенная информация не является публичной офертой, подробнее можно
+            ознакомиться здесь. Цены носят информационный характер, наличие товара уточняйте у менеджера.</p>
         </div>
     </footer>
 </body>
