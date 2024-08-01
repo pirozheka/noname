@@ -1,74 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Контакты</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="header-items" x-data="{ searchOpen: false }" @click.away="searchOpen = false">
-                <div class="logo">
-                    <a href="/">
-                        <img src="images/logo.svg" alt="Logo">
-                    </a>
-                </div>
-                <div class="nav-menu">
-                    <ul>
-                        <li>Каталог</li>
-                        <li>Услуги</li>
-                        <li><a href="/contacts">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="recall">
-                    <div class="location">
-                        <a href="" class="location-trigger">
-                            <img src="assets/icons/location.svg" alt="">
-                            <p>Астана</p>
-                        </a>
-
-                    </div>
-                    <div class="recall-block">
-                        <div class="recall-caption"><a href="mailto:info@mail.com">info@mail.com</a></div>
-                        <div class="recall-number"><a href="tel:+79999999999">+7(999)999-99-99</a></div>
-                    </div>
-                    <button id="recall-button">Обратный звонок</button>
-                </div>
-
-                <div class="nav-icons">
-                    <div class="icon search-icon" @click="searchOpen = !searchOpen">
-                    </div>
-                    <div class="searchbox" x-show="searchOpen" x-transition>
-                        <input type="text" id="searchbox" placeholder="Поиск товара">
-                        <button id="search-submit" type="submit"></button>
-                        <div class="search-close" @click="searchOpen = !searchOpen"></div>
-                    </div>
-                    <div class="icon cart-icon">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="header-mobile">
-        <div class="mobile-wrapper">
-            <div class="header-mobile-group">
-                <div class="location">
-                    <a href="" class="location-trigger">
-                        <img src="assets/icons/location.svg" alt="">
-                        <p>Астана</p>
-                    </a>   
-                </div>
-                <input type="text" id="searchbox" class="mobile-search" placeholder="Поиск">
-            </div>
-        </div>
-
-    </div>
+    <div id="header-placeholder"></div>
     <section class="contacts">
         <div class="contacts-line"></div>
         <div class="container">
@@ -78,12 +20,12 @@
             </ul>
             <h1>Контакты</h1>
             <div class="contacts-cols">
-                <div class="contacts-left">                 
+                <div class="contacts-left">
                     <form action="" method="post" id="contacts-form">
                         <input type="tel" name="phone" placeholder="Телефон" required>
                         <input type="text" name="name" placeholder="Имя">
                         <label for="check">
-                            <input type="checkbox" name="check" checked>
+                            <input type="checkbox" class="custom-checkbox" name="check" checked>
                             <span>Отправляя форму, вы даете согласие на <a href="/policy"
                                     class="contacts-form-link">обработку персональных данных</a></span>
                         </label>
@@ -127,95 +69,7 @@
             <script type="text/javascript" charset="utf-8" async
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad99b3a734a94df8fbf91d699fa8fd1acbe561f8675e2f7ca1b1c48cdb8349535&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
-
-
     </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-cols">
-                <div class="footer-callback">
-                    <div class="logo">
-                        <a href="/">
-                            <img src="images/logo.svg" alt="Logo">
-                        </a>
-
-                        <div class="footer-callback-form_caption">Оставить почту для связи</div>
-                        <form action="" method="post" class="footer-callback-form">
-                            <input type="email" placeholder="example@mail.com">
-                            <label for="check">
-                                <input type="checkbox" name="check" checked>
-                                <span>Отправляя форму, вы даете согласие на <a href="/policy"
-                                        class="contacts-form-link">обработку персональных данных</a></span>
-                            </label>
-                            <button id="footer-callback-btn">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-menu">
-                    <div class="footer-menu-item"">
-                        <div class=" footer-menu-item_caption">Для клиентов</div>
-                    <ul>
-                        <li>Каталог</li>
-                        <li>Услуги</li>
-                        <li>Контакты</li>
-                    </ul>
-                </div>
-                <div class="footer-menu-item" x-data="{ isOpen: false }">
-                    <div class="footer-menu-item_caption">Каталог</div>
-                    <ul>
-                        <li>Контакты</li>
-                        <li>Доставка и оплата</li>
-                        <li>Услуги</li>
-                        <li>Блог</li>
-                        <template x-if="isOpen">
-                            <li>Текст</li>
-                            <li>Текст</li>
-                            <li>Текст</li>
-                        </template>
-                    </ul>
-                    <a href="#" x-on:click.prevent="isOpen = !isOpen">
-                        <span x-show="!isOpen" class="footer-showmore">Показать еще</span>
-                    </a>
-                </div>
-                <div class="footer-menu-item_group">
-                    <div class="footer-menu-item">
-                        <div class="footer-menu-item_caption">Контакты</div>
-
-                        <div class="footer-contact-item">
-                            <img src="assets/icons/location.svg" alt="">
-                            <p>Алматы, ул. Ленина 86, офис 15</p>
-                        </div>
-
-                        <div class="footer-contact-item">
-                            <img src="assets/icons/mail.svg" alt="">
-                            <p><a href="mailto:info@ermail.kz">info@ermail.kz</a></p>
-                        </div>
-
-                        <div class="footer-contact-item">
-                            <img src="assets/icons/phone.svg" alt="">
-                            <p><a href="tel:+7999999999">8 999 99 99 99</a></p>
-                        </div>
-                    </div>
-                    <div class="footer-menu-item">
-                        <div class="footer-menu-item_caption">Время работы</div>
-                        <p>Пн-Пт: 9:00-18:00</p>
-                        <p>Сб: 9:00-14:00</p>
-                        <p>Вс: выходной</p>
-                        <p>Прием заявок: 24/7</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <div>©ООО </div>
-            <a href="/policy">Политика конфиденциальности</a>
-        </div>
-        <p class="offer">Внимание, размещенная информация не является публичной офертой, подробнее можно
-            ознакомиться здесь. Цены носят информационный характер, наличие товара уточняйте у менеджера.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 </body>
-
-
 </html>

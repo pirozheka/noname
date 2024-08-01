@@ -1,7 +1,6 @@
 /* section */
 .contacts {
     background-color: var(--dark-background);
-    padding-top: 60px;
     color: var(--normal);
     padding-top: 100px;
 }
@@ -18,7 +17,7 @@
     list-style-type: none;
     padding: 0;
     font-size: 16px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .breadcrumps-item::after {
@@ -94,7 +93,7 @@
 
 
 
-@media  (max-width:1180px) {
+@media (max-width:1180px) {
     #contacts-form {
         max-width: 400px;
     }
@@ -139,10 +138,30 @@
         gap: 45px;
     }
 
+    .contacts-right-item_caption {
+        text-align: center;
+    }
+
     .contacts-right-item_descr {
         max-width: 100%;
         gap: 10px;
         margin-top: 18px;
+        justify-content: center;
     }
 
+    .contacts-right-item_descr p {
+        font-size: 20px;
+    }
+
+    .contacts-right-item_descr p>a {
+        font-size: 20px;
+    }
+
+    #contacts-form {
+        margin-top: 80px;
+    }
+
+    #contacts-btn {
+        max-width: 100%;
+    }
 }
