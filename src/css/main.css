@@ -336,6 +336,12 @@ footer {
     display: flex;
     gap: 15px;
     margin-top: 12px;
+    align-items: center;
+}
+
+.footer-contact-item img {
+    width: 20px;  
+    height: 20px;  
 }
 
 .copyright {
