@@ -119,6 +119,10 @@
     .contacts-map {
         margin-top: 100px;
     }
+
+    #contacts-form input[type='text'], #contacts-form input[type='tel'] {
+        border-radius: 0px;
+    }
 }
 
 @media (max-width:980px) {

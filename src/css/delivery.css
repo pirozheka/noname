@@ -60,11 +60,98 @@
 }
 
 .delivery-map {
-    margin: 100px 0;
+    margin: 70px 0;
     text-align: center;
     padding: 0 10%;
+    position: relative;
+    height: 600px;
+    width: 80%;  
+}
+
+.map {
+    position: absolute;
+    z-index: 5;
+}
+
+.mobile-map {
+    display: none;
+}
+.map-dist {
+    transition: all 0.5s ease-out;
 }
 
 .map-dist:hover {
     fill: var(--accent);
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    max-width: 220px;
+    background: #fff;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 4px;
+    padding: 4px 8px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-out;
+    font-size: 14px;
+}
+
+@media (max-width:980px) {
+    .delivery-info {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .delivery-info-conditions {
+        border: none;
+        padding: 0;
+    }
+
+    .delivery-info-conditions_flex {
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        padding: 0;
+        gap: 25px
+    }
+
+
+    .delivery-info-conditions-caption {
+        font-size: 25px;
+    }
+
+    .delivery-info-conditions-descr {
+        margin-top: 15px;
+    }
+
+    .delivery-item {
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .delivery-item-caption {
+        font-size: 18px;
+    }
+
+    .delivery-map {
+        height: calc(100%);
+        width: 100%;
+    }
+
+    .map{
+        display: none;
+    }
+
+    .mobile-map {
+        display: block;
+        width: 100%;
+    }
+
 }
