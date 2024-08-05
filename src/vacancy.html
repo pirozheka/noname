@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +42,7 @@
                     </div>
                     <button id="recall-button">Обратный звонок</button>
                 </div>
-    
+
                 <div class="nav-icons">
                     <div class="icon search-icon" @click="searchOpen = !searchOpen">
                     </div>
@@ -56,7 +57,7 @@
             </div>
         </div>
     </header>
-    
+
     <div class="header-mobile">
         <div class="mobile-wrapper">
             <div class="header-mobile-group">
@@ -76,65 +77,130 @@
 
     <!-- END HEADER -->
 
-    <section class="contacts">
-        <div class="contacts-line"></div>
+    <!-- MAIN SECTION -->
+    <section class="vacancy">
         <div class="container">
             <ul class="breadcrumps">
                 <li class="breadcrumps-item"><a href="/">Главная</a></li>
-                <li>Контакты</li>
+                <li>Вакансии</li>
             </ul>
-            <h1>Контакты</h1>
-            <div class="contacts-cols">
-                <div class="contacts-left">
-                    <form action="" method="post" id="contacts-form">
-                        <input type="tel" name="phone" placeholder="Телефон" required>
-                        <input type="text" name="name" placeholder="Имя">
-                        <label for="check">
-                            <input type="checkbox" class="custom-checkbox" name="check" checked>
-                            <span>Отправляя форму, вы даете согласие на <a href="/policy"
-                                    class="contacts-form-link">обработку персональных данных</a></span>
-                        </label>
-                        <button id="contacts-btn">Отправить</button>
-                    </form>
+            <h1>Вакансии</h1>
+            <div class="vacancy-group">
+                <div class="vacancy-item">
+                    <div class="vacancy-item-caption">
+                        <div class="vacancy-item-caption_title">
+                            Менеджер по продажам
+                        </div>
+                        <div class="vacancy-item_salary">
+                            <p>Зарплата</p>
+                            <p class="num">до 100 000 тенге</p>
+                        </div>
+                    </div>
+                    <div class="salary-item-location">
+                        <div><img src="assets/icons/location-vacancy.svg"><p>офис Алматы</p></div>
+                        <div><img src="assets/icons/time-vacancy.svg"><p>Опыт работы от 1 года</p></div>
+                    </div>
+                    <div class="vacancy-item-descr">
+                        Построение отдела с 0 на основе анализа текущей деятельности. Сбор и обучение своей команды.
+                        Оценка работы МОП: звонки, переписки, ведение...
+                        Имеет успешный опыт работы руководителем отдела качества. Опыт РОКК в инфобизнесе - твое
+                        супер-преимущество. Проактивен - не боится ответственности
+                    </div>
+                    <div class="vacancy-item-buttons">
+                        <button id="apply">Откликнуться</button>
+                        <a href="#">Подробнее</a>
+                    </div>
                 </div>
-                <div class="contacts-right">
-                    <div class="contacts-right-item">
-                        <div class="contacts-right-item_caption">Телефон</div>
-                        <div class="contacts-right-item_descr">
-                            <img src="assets/icons/phone.svg" alt="">
-                            <p><a href="tel:+7999999999">8 999 99 99 99</a></p>
+                <div class="vacancy-item">
+                    <div class="vacancy-item-caption">
+                        <div class="vacancy-item-caption_title">
+                            Менеджер по продажам
+                        </div>
+                        <div class="vacancy-item_salary">
+                            <p>Зарплата</p>
+                            <p class="num">до 100 000 тенге</p>
                         </div>
                     </div>
-                    <div class="contacts-right-item">
-                        <div class="contacts-right-item_caption">Почта</div>
-                        <div class="contacts-right-item_descr">
-                            <img src="assets/icons/mail.svg" alt="">
-                            <p><a href="mailto:info@ermail.kz">info@ermail.kz</a></p>
+                    <div class="salary-item-location">
+                        <div><img src="assets/icons/location-vacancy.svg"><p>офис Алматы</p></div>
+                        <div><img src="assets/icons/time-vacancy.svg"><p>Опыт работы от 1 года</p></div>
+                    </div>
+                    <div class="vacancy-item-descr">
+                        Построение отдела с 0 на основе анализа текущей деятельности. Сбор и обучение своей команды.
+                        Оценка работы МОП: звонки, переписки, ведение...
+                        Имеет успешный опыт работы руководителем отдела качества. Опыт РОКК в инфобизнесе - твое
+                        супер-преимущество. Проактивен - не боится ответственности
+                    </div>
+                    <div class="vacancy-item-buttons">
+                        <button id="apply">Откликнуться</button>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="vacancy-item">
+                    <div class="vacancy-item-caption">
+                        <div class="vacancy-item-caption_title">
+                            Менеджер по продажам
+                        </div>
+                        <div class="vacancy-item_salary">
+                            <p>Зарплата</p>
+                            <p class="num">до 100 000 тенге</p>
                         </div>
                     </div>
-                    <div class="contacts-right-item">
-                        <div class="contacts-right-item_caption">Офис</div>
-                        <div class="contacts-right-item_descr">
-                            <img src="assets/icons/location.svg" alt="">
-                            <p>Алматы, ул. Ленина 86, офис 15</p>
-                        </div>
+                    <div class="salary-item-location">
+                        <div><img src="assets/icons/location-vacancy.svg"><p>офис Алматы</p></div>
+                        <div><img src="assets/icons/time-vacancy.svg"><p>Опыт работы от 1 года</p></div>
                     </div>
-                    <div class="contacts-right-item">
-                        <div class="contacts-right-item_caption">Время работы</div>
-                        <div class="contacts-right-item_descr">
-                            <img src="assets/icons/time.svg" alt="">
-                            <p>Пн-пт: 9:00 - 18:00</p>
-                        </div>
+                    <div class="vacancy-item-descr">
+                        Построение отдела с 0 на основе анализа текущей деятельности. Сбор и обучение своей команды.
+                        Оценка работы МОП: звонки, переписки, ведение...
+                        Имеет успешный опыт работы руководителем отдела качества. Опыт РОКК в инфобизнесе - твое
+                        супер-преимущество. Проактивен - не боится ответственности
+                    </div>
+                    <div class="vacancy-item-buttons">
+                        <button id="apply">Откликнуться</button>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="vacancy-item_fixed">
+                   <div>НЕ НАШЛИ ПОДХОДЯЩУЮ ВАКАНСИЮ?</div>
+                   <p>
+                    <a href="" ><span>Отправить резюме</span><img src="assets/icons/arrow-up.svg" alt=""></a>
+                   </p>
+                </div>
+            </div>
+            <div class="vacancy-options">
+                <div class="vacancy-options_title">Работа в нашей команде - это:</div>
+                <div class="vacancy-options_values">
+                    <div class="vacancy-options_item">
+                        <img src="assets/icons/fake-rectangle.svg" alt="">
+                        <div class="vacancy-options-item_caption">Интересные корпоративы</div>
+                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого качества продукции от надежных производителей металлопроката, квалифицированный уровень обслуживания и взаимовыгодные партнерские отношения.</div>
+                    </div>
+                    <div class="vacancy-options_item">
+                        <img src="assets/icons/fake-rectangle.svg" alt="">
+                        <div class="vacancy-options-item_caption">Высокая оплата труда</div>
+                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого качества продукции от надежных производителей металлопроката, квалифицированный уровень обслуживания и взаимовыгодные партнерские отношения.</div>
+                    </div>
+                    <div class="vacancy-options_item">
+                        <img src="assets/icons/fake-rectangle.svg" alt="">
+                        <div class="vacancy-options-item_caption">Постоянный карьерный рост</div>
+                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого качества продукции от надежных производителей металлопроката, квалифицированный уровень обслуживания и взаимовыгодные партнерские отношения.</div>
+                    </div>
+                    <div class="vacancy-options_item">
+                        <img src="assets/icons/fake-rectangle.svg" alt="">
+                        <div class="vacancy-options-item_caption">Высокая оплата труда</div>
+                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого качества продукции от надежных производителей металлопроката, квалифицированный уровень обслуживания и взаимовыгодные партнерские отношения.</div>
                     </div>
                 </div>
             </div>
-
+            <div class="vacancy-img">
+                <img src="images/vacancy-img.png" alt="">
+            </div>
         </div>
-        <div class="contacts-map">
-            <script type="text/javascript" charset="utf-8" async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad99b3a734a94df8fbf91d699fa8fd1acbe561f8675e2f7ca1b1c48cdb8349535&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-        </div>
+        
     </section>
+    <!-- END MAIN SECTION -->
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -155,7 +221,7 @@
                         </label>
                         <button id="footer-callback-btn">Отправить</button>
                     </form>
-    
+
                 </div>
                 <div class="footer-menu">
                     <div class="footer-menu-item"">
@@ -186,17 +252,17 @@
                 <div class="footer-menu-item_group">
                     <div class="footer-menu-item">
                         <div class="footer-menu-item_caption">Контакты</div>
-    
+
                         <div class="footer-contact-item">
                             <img src="assets/icons/location.svg" alt="">
                             <p>Алматы, ул. Ленина 86, офис 15</p>
                         </div>
-    
+
                         <div class="footer-contact-item">
                             <img src="assets/icons/mail.svg" alt="">
                             <p><a href="mailto:info@ermail.kz">info@ermail.kz</a></p>
                         </div>
-    
+
                         <div class="footer-contact-item">
                             <img src="assets/icons/phone.svg" alt="">
                             <p><a href="tel:+7999999999">8 999 99 99 99</a></p>
@@ -243,4 +309,5 @@
     </nav>
     <!--END FOOTER -->
 </body>
+
 </html>
