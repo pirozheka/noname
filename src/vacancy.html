@@ -13,7 +13,18 @@
 </head>
 
 <body>
-    <!-- HEADER -->
+     <!--HEADER-->
+     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script>
+    </head>
+    <body>
+       <!-- HEADER -->
     <header>
         <div class="container">
             <div class="header-items" x-data="{ searchOpen: false }" @click.away="searchOpen = false">
@@ -199,6 +210,33 @@
         </div>
         
     </section>
+
+    <!--VACANCY - RECALL - POPUP -->
+    <div class="vacancy-recall">
+        <div class="overlay"></div>
+        <div class="popup vacancy-popup">
+            <div class="popup-header">
+                <div class="popup-caption">Откликнуться на вакансию</div>
+                <div class="closebutton">
+                    <img src="assets/icons/closepopup.svg" alt="">
+                </div>
+                <div class="popup-descr">
+                    Откликнитесь на вакансию и мы свяжемся с вами в ближайшее время
+                </div>
+                <form action="" class="popup-form">
+                    <input type="tel" placeholder="Телефон" required>
+                    <input type="text" placeholder="Имя">
+                    <label for="check">
+                        <input type="checkbox" class="custom-checkbox" name="check" checked>
+                        <span>Отправляя форму, вы даете согласие на <a href="/policy" class="contacts-form-link">обработку
+                                персональных данных</a></span>
+                    </label>
+                    <input type="file" id="file" name="file" multiple />
+                    <button id="popup-callback-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- END MAIN SECTION -->
 
     <!-- FOOTER -->
@@ -227,9 +265,9 @@
                     <div class="footer-menu-item"">
                         <div class=" footer-menu-item_caption">Для клиентов</div>
                     <ul>
-                        <li>Каталог</li>
-                        <li>Услуги</li>
-                        <li>Контакты</li>
+                        <li><a href="">Каталог</a></li>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-menu-item" x-data="{ isOpen: false }">
@@ -286,6 +324,8 @@
             ознакомиться здесь. Цены носят информационный характер, наличие товара уточняйте у менеджера.</p>
         </div>
     </footer>
+
+    <!--mobile-tabbar-->
     <nav class="tabbar">
         <a href="#" class="tabbar-item tabbar-active">
             <img src="assets/icons/shop.svg" alt="">
@@ -307,7 +347,38 @@
             <p>Контакты</p>
         </a>
     </nav>
+
+    <!-- end mobile-tabbar-->
+
+    <!--popups-->
+    <div class="callback">
+        <div class="overlay"></div>
+        <div class="popup callpack-popup">
+            <div class="popup-header">
+                <div class="popup-caption">Обратный звонок</div>
+                <div class="closebutton">
+                    <img src="assets/icons/closepopup.svg" alt="">
+                </div>
+            </div>
+
+            <div class="popup-descr">
+                Оставьте заявку и наши менеджеры свяжутся с вами
+            </div>
+            <form action="" class="popup-form">
+                <input type="tel" placeholder="Телефон" required>
+                <input type="text" placeholder="Имя">
+                <label for="check">
+                    <input type="checkbox" class="custom-checkbox" name="check" checked>
+                    <span>Отправляя форму, вы даете согласие на <a href="/policy" class="contacts-form-link">обработку
+                            персональных данных</a></span>
+                </label>
+                <button id="popup-callback-btn">Отправить</button>
+            </form>
+        </div>
+        <!--end popups-->
+    </div>
     <!--END FOOTER -->
+    <script src="js/main.min.js" async></script>
 </body>
 
 </html>
