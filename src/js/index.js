@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let recallButton = document.querySelector('#recall-button');
-    let popup = document.querySelector('.callpack-popup');
+    let recallButton = document.querySelector('#recall-button');   
+    let popup = document.querySelector('.callpack-popup');   
     let overlay = document.querySelector('.overlay');
     let closePopup = document.querySelector('.closebutton');
 
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     closePopup.addEventListener('click', function() {
-        popup.classList.remove('show');
+        popup.classList.remove('show');  
         overlay.classList.remove('show');
     });
 
@@ -19,3 +19,4 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.classList.remove('show');
     });
 });
+

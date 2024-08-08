@@ -9,22 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/styles.min.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-    <script src="js/main.min.js" defer></script>
 </head>
 
 <body>
-     <!--HEADER-->
-     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="css/styles.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script>
-    </head>
-    <body>
-       <!-- HEADER -->
+    <!-- HEADER -->
     <header>
         <div class="container">
             <div class="header-items" x-data="{ searchOpen: false }" @click.away="searchOpen = false">
@@ -85,7 +73,6 @@
             </div>
         </div>
     </div>
-
     <!-- END HEADER -->
 
     <!-- MAIN SECTION -->
@@ -108,8 +95,12 @@
                         </div>
                     </div>
                     <div class="salary-item-location">
-                        <div><img src="assets/icons/location-vacancy.svg"><p>офис Алматы</p></div>
-                        <div><img src="assets/icons/time-vacancy.svg"><p>Опыт работы от 1 года</p></div>
+                        <div><img src="assets/icons/location-vacancy.svg">
+                            <p>офис Алматы</p>
+                        </div>
+                        <div><img src="assets/icons/time-vacancy.svg">
+                            <p>Опыт работы от 1 года</p>
+                        </div>
                     </div>
                     <div class="vacancy-item-descr">
                         Построение отдела с 0 на основе анализа текущей деятельности. Сбор и обучение своей команды.
@@ -133,8 +124,12 @@
                         </div>
                     </div>
                     <div class="salary-item-location">
-                        <div><img src="assets/icons/location-vacancy.svg"><p>офис Алматы</p></div>
-                        <div><img src="assets/icons/time-vacancy.svg"><p>Опыт работы от 1 года</p></div>
+                        <div><img src="assets/icons/location-vacancy.svg">
+                            <p>офис Алматы</p>
+                        </div>
+                        <div><img src="assets/icons/time-vacancy.svg">
+                            <p>Опыт работы от 1 года</p>
+                        </div>
                     </div>
                     <div class="vacancy-item-descr">
                         Построение отдела с 0 на основе анализа текущей деятельности. Сбор и обучение своей команды.
@@ -158,8 +153,12 @@
                         </div>
                     </div>
                     <div class="salary-item-location">
-                        <div><img src="assets/icons/location-vacancy.svg"><p>офис Алматы</p></div>
-                        <div><img src="assets/icons/time-vacancy.svg"><p>Опыт работы от 1 года</p></div>
+                        <div><img src="assets/icons/location-vacancy.svg">
+                            <p>офис Алматы</p>
+                        </div>
+                        <div><img src="assets/icons/time-vacancy.svg">
+                            <p>Опыт работы от 1 года</p>
+                        </div>
                     </div>
                     <div class="vacancy-item-descr">
                         Построение отдела с 0 на основе анализа текущей деятельности. Сбор и обучение своей команды.
@@ -169,14 +168,14 @@
                     </div>
                     <div class="vacancy-item-buttons">
                         <button id="apply">Откликнуться</button>
-                        <a href="#">Подробнее</a>
+                        <a href="#!" class="toggle-more">Подробнее</a>
                     </div>
                 </div>
                 <div class="vacancy-item_fixed">
-                   <div>НЕ НАШЛИ ПОДХОДЯЩУЮ ВАКАНСИЮ?</div>
-                   <p>
-                    <a href="" ><span>Отправить резюме</span><img src="assets/icons/arrow-up.svg" alt=""></a>
-                   </p>
+                    <div>НЕ НАШЛИ ПОДХОДЯЩУЮ ВАКАНСИЮ?</div>
+                    <p>
+                        <a href=""><span>Отправить резюме</span><img src="assets/icons/arrow-up.svg" alt=""></a>
+                    </p>
                 </div>
             </div>
             <div class="vacancy-options">
@@ -185,22 +184,30 @@
                     <div class="vacancy-options_item">
                         <img src="assets/icons/fake-rectangle.svg" alt="">
                         <div class="vacancy-options-item_caption">Интересные корпоративы</div>
-                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого качества продукции от надежных производителей металлопроката, квалифицированный уровень обслуживания и взаимовыгодные партнерские отношения.</div>
+                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого
+                            качества продукции от надежных производителей металлопроката, квалифицированный уровень
+                            обслуживания и взаимовыгодные партнерские отношения.</div>
                     </div>
                     <div class="vacancy-options_item">
                         <img src="assets/icons/fake-rectangle.svg" alt="">
                         <div class="vacancy-options-item_caption">Высокая оплата труда</div>
-                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого качества продукции от надежных производителей металлопроката, квалифицированный уровень обслуживания и взаимовыгодные партнерские отношения.</div>
+                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого
+                            качества продукции от надежных производителей металлопроката, квалифицированный уровень
+                            обслуживания и взаимовыгодные партнерские отношения.</div>
                     </div>
                     <div class="vacancy-options_item">
                         <img src="assets/icons/fake-rectangle.svg" alt="">
                         <div class="vacancy-options-item_caption">Постоянный карьерный рост</div>
-                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого качества продукции от надежных производителей металлопроката, квалифицированный уровень обслуживания и взаимовыгодные партнерские отношения.</div>
+                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого
+                            качества продукции от надежных производителей металлопроката, квалифицированный уровень
+                            обслуживания и взаимовыгодные партнерские отношения.</div>
                     </div>
                     <div class="vacancy-options_item">
                         <img src="assets/icons/fake-rectangle.svg" alt="">
                         <div class="vacancy-options-item_caption">Высокая оплата труда</div>
-                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого качества продукции от надежных производителей металлопроката, квалифицированный уровень обслуживания и взаимовыгодные партнерские отношения.</div>
+                        <div class="vacancy-options-item_descr">Наш опыт и репутация на рынке — это гарантия высокого
+                            качества продукции от надежных производителей металлопроката, квалифицированный уровень
+                            обслуживания и взаимовыгодные партнерские отношения.</div>
                     </div>
                 </div>
             </div>
@@ -208,7 +215,7 @@
                 <img src="images/vacancy-img.png" alt="">
             </div>
         </div>
-        
+
     </section>
 
     <!--VACANCY - RECALL - POPUP -->
@@ -217,24 +224,32 @@
         <div class="popup vacancy-popup">
             <div class="popup-header">
                 <div class="popup-caption">Откликнуться на вакансию</div>
-                <div class="closebutton">
+                <div class="recall-close">
                     <img src="assets/icons/closepopup.svg" alt="">
                 </div>
+            </div>
                 <div class="popup-descr">
                     Откликнитесь на вакансию и мы свяжемся с вами в ближайшее время
                 </div>
                 <form action="" class="popup-form">
                     <input type="tel" placeholder="Телефон" required>
                     <input type="text" placeholder="Имя">
+                    <div class="file-input-contaier">
+                        <input type="file" id="file-input" name="file" multiple />
+                        <label for="file-input" class="file-input-label" id="file-label">
+                            <img src="assets/icons/file-mark.svg" alt="Прикрепить файл" />
+                            Прикрепить файл
+                        </label>
+                    </div>
+                    
                     <label for="check">
                         <input type="checkbox" class="custom-checkbox" name="check" checked>
                         <span>Отправляя форму, вы даете согласие на <a href="/policy" class="contacts-form-link">обработку
                                 персональных данных</a></span>
                     </label>
-                    <input type="file" id="file" name="file" multiple />
                     <button id="popup-callback-btn">Отправить</button>
                 </form>
-            </div>
+            
         </div>
     </div>
     <!-- END MAIN SECTION -->
@@ -350,7 +365,7 @@
 
     <!-- end mobile-tabbar-->
 
-    <!--popups-->
+    <!--callback-popup-->
     <div class="callback">
         <div class="overlay"></div>
         <div class="popup callpack-popup">
@@ -375,10 +390,41 @@
                 <button id="popup-callback-btn">Отправить</button>
             </form>
         </div>
-        <!--end popups-->
+        <!--end callback-popup-->
     </div>
     <!--END FOOTER -->
     <script src="js/main.min.js" async></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let applyButtons = document.querySelectorAll('#apply');
+            let applyPopup = document.querySelector('.vacancy-popup');
+            let overlay = document.querySelector('.overlay');
+            let closePopup = document.querySelector('.recall-close');
+
+            applyButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    applyPopup.classList.add('show');
+                    overlay.classList.add('show');
+                });
+            });
+
+            closePopup.addEventListener('click', function () {
+                applyPopup.classList.remove('show');
+                overlay.classList.remove('show');
+            });
+
+            overlay.addEventListener('click', function () {
+                applyPopup.classList.remove('show');
+                overlay.classList.remove('show');
+            });
+        });
+
+        document.getElementById('file-input').addEventListener('change', function() {
+            var fileName = this.files.length > 0 ? this.files[0].name : 'Прикрепить файл';
+            document.getElementById('file-label').textContent = fileName;
+        });
+
+    </script>
 </body>
 
 </html>

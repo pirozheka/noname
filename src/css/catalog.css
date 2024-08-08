@@ -1,0 +1,76 @@
+.catalog-group {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.catalog-group-item {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    margin: 10px;
+}
+
+.catalog-group-item_link {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    height: 190px;
+    filter: grayscale(100%);
+}
+
+.catalog-group-item_link:hover {
+    color: var(--accent);
+    filter: grayscale(10%);
+}
+
+.catalog-group-item_title {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: black 1px 0 10px;
+}
+
+.catalog-group-item:nth-child(1) .catalog-group-item_link {
+    background-image: url('../images/sort.png');
+}
+
+.catalog-group-item:nth-child(2) .catalog-group-item_link {
+    background-image: url('../images/fasonnyj.png');
+}
+
+.catalog-group-item:nth-child(3) .catalog-group-item_link {
+    background-image: url('../images/listovoj.png');
+}
+
+.catalog-group-item:nth-child(4) .catalog-group-item_link {
+    background-image: url('../images/nerzh.png');
+}
+
+
+@media (max-width: 1200px) {
+    .catalog-group-item {
+        flex: 1 1 calc(50% - 40px);
+        /* 2 плитки в ряд на средних экранах */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .category {
+        flex: 1 1 calc(100% - 40px);
+        /* 1 плитка в ряд на маленьких экранах */
+        max-width: calc(100% - 40px);
+    }
+}

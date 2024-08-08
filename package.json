@@ -30,6 +30,7 @@
     "style-loader": "^4.0.0"
   },
   "dependencies": {
+    "gulp-rename": "^2.0.0",
     "imagemin": "^9.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
